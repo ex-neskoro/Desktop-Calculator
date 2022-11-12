@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="430.0" prefWidth="210.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.calc.CalcController">
+   <HBox alignment="CENTER" layoutX="7.0" layoutY="245.0" prefHeight="61.0" prefWidth="145.0" spacing="1.0">
+      <children>
+          <Button layoutX="96.0" layoutY="47.0" minHeight="-Infinity" minWidth="-Infinity" onAction="#onBut_1" prefHeight="40.0" prefWidth="40.0" text="1" />
+          <Button layoutX="102.0" layoutY="47.0" minHeight="-Infinity" minWidth="-Infinity" onAction="#onBut_2" prefHeight="40.0" prefWidth="40.0" text="2" />
+          <Button layoutX="110.0" layoutY="47.0" minHeight="-Infinity" minWidth="-Infinity" onAction="#onBut_3" prefHeight="40.0" prefWidth="40.0" text="3" />
+      </children>
+   </HBox>
+    <HBox alignment="CENTER" layoutX="7.0" layoutY="296.0" prefHeight="61.0" prefWidth="145.0" spacing="1.0">
+        <children>
+            <Button layoutX="96.0" layoutY="47.0" minHeight="-Infinity" minWidth="-Infinity" onAction="#onBut_4" prefHeight="40.0" prefWidth="40.0" text="4" />
+            <Button layoutX="102.0" layoutY="47.0" minHeight="-Infinity" minWidth="-Infinity" onAction="#onBut_5" prefHeight="40.0" prefWidth="40.0" text="5" />
+            <Button layoutX="110.0" layoutY="47.0" minHeight="-Infinity" minWidth="-Infinity" onAction="#onBut_6" prefHeight="40.0" prefWidth="40.0" text="6" />
+        </children>
+    </HBox>
+    <HBox alignment="CENTER" layoutX="7.0" layoutY="347.0" prefHeight="61.0" prefWidth="145.0" spacing="1.0">
+        <children>
+            <Button layoutX="96.0" layoutY="47.0" minHeight="-Infinity" minWidth="-Infinity" onAction="#onBut_7" prefHeight="40.0" prefWidth="40.0" text="7" />
+            <Button layoutX="102.0" layoutY="47.0" minHeight="-Infinity" minWidth="-Infinity" onAction="#onBut_8" prefHeight="40.0" prefWidth="40.0" text="8" />
+            <Button layoutX="110.0" layoutY="47.0" minHeight="-Infinity" minWidth="-Infinity" onAction="#onBut_9" prefHeight="40.0" prefWidth="40.0" text="9" />
+        </children>
+    </HBox>
+    <HBox alignment="CENTER" layoutX="7.0" layoutY="397.0" prefHeight="61.0" prefWidth="145.0" spacing="1.0">
+        <children>
+            <Button layoutX="96.0" layoutY="47.0" minHeight="-Infinity" minWidth="-Infinity" onAction="#onBut_0" prefHeight="40.0" prefWidth="80.0" text="0" />
+            <Button layoutX="102.0" layoutY="47.0" minHeight="-Infinity" minWidth="-Infinity" onAction="#onBut_comma" prefHeight="40.0" prefWidth="40.0" text="," />
+        </children>
+    </HBox>
+   <VBox alignment="CENTER" layoutX="124.0" layoutY="247.0" prefHeight="200.0" prefWidth="100.0">
+      <children>
+         <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#onPlus" prefHeight="40.0" prefWidth="40.0" text="+" />
+         <Button layoutX="48.0" layoutY="97.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#onMinus" prefHeight="40.0" prefWidth="40.0" text="-" />
+         <Button layoutX="48.0" layoutY="110.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#onMultiply" prefHeight="40.0" prefWidth="40.0" text="*" />
+         <Button layoutX="40.0" layoutY="130.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#onDivide" prefHeight="40.0" prefWidth="40.0" text="/" />
+         <Button layoutX="40.0" layoutY="150.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#onEqualsSignClick" prefHeight="40.0" prefWidth="40.0" text="=" />
+      </children>
+   </VBox>
+   <Text fx:id="fNum" accessibleText="+++++" layoutX="81.0" layoutY="45.0" text="firstNum" />
+    <Text fx:id="actionSign" layoutX="55.0" layoutY="80.0" text="sign" />
+   <Text fx:id="sNum" layoutX="14.0" layoutY="117.0" text="secondNum" />
+    <TextField fx:id="result" layoutX="7.0" layoutY="184.0" text="result">
+
+    </TextField>
+   <Button layoutX="51.0" layoutY="217.0" mnemonicParsing="false" onAction="#onClearClick" text="Clear" />
+
+</AnchorPane>
