@@ -15,8 +15,8 @@ public class CalcController {
     @FXML
     private TextField result;
 
-    private StringBuffer firstBuffer = new StringBuffer();
-    private StringBuffer secondBuffer = new StringBuffer();
+    private StringBuilder firstBuffer = new StringBuilder();
+    private StringBuilder secondBuffer = new StringBuilder();
 
     boolean secondInFlag = false;
 
@@ -100,10 +100,10 @@ public class CalcController {
 
     @FXML
     protected void onClearClick() {
-        firstBuffer = new StringBuffer();
+        firstBuffer = new StringBuilder();
         fNum.setText(firstBuffer.toString());
 
-        secondBuffer = new StringBuffer();
+        secondBuffer = new StringBuilder();
         sNum.setText(secondBuffer.toString());
 
         actionSign.setText("sign");
