@@ -11,7 +11,7 @@ public class Calc extends Application {
     @Override
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(Calc.class.getResource("calc-view.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 200, 450);
+        Scene scene = new Scene(fxmlLoader.load(), 186, 315);
         stage.setTitle("This is a calc!");
         stage.setResizable(false);
         stage.setScene(scene);
