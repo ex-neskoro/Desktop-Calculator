@@ -12,6 +12,8 @@ public class CalcController {
     @FXML
     private Text sNum;
 
+    boolean minusSign = false;
+
     @FXML
     private TextField result;
 
@@ -66,12 +68,23 @@ public class CalcController {
     }
 
     protected void onNumButtonClick(String num) {
+        appendNumToBuffer(num);
+        setTextBufferTextToCalc();
+    }
+
+    protected void setTextBufferTextToCalc() {
         if (!secondInFlag) {
-            firstBuffer.append(num);
             fNum.setText(firstBuffer.toString());
         } else {
-            secondBuffer.append(num);
             sNum.setText(secondBuffer.toString());
+        }
+    }
+
+    protected void appendNumToBuffer(String num) {
+        if (!secondInFlag) {
+            firstBuffer.append(num);
+        } else {
+            secondBuffer.append(num);
         }
     }
 
@@ -111,6 +124,30 @@ public class CalcController {
         result.setText("result");
 
         secondInFlag = false;
+
+        minusSign = false;
+    }
+
+    @FXML
+    protected void onPlusMinusClick() {
+        if (!secondInFlag) {
+            if (!minusSign) {
+                firstBuffer.insert(0, "-");
+                minusSign = true;
+            } else {
+                firstBuffer.deleteCharAt(0);
+                minusSign = false;
+            }
+        } else {
+            if (!minusSign) {
+                secondBuffer.insert(0, "-");
+                minusSign = true;
+            } else {
+                secondBuffer.deleteCharAt(0);
+                minusSign = false;
+            }
+        }
+        setTextBufferTextToCalc();
     }
 
     @FXML
