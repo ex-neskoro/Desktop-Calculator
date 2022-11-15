@@ -108,6 +108,9 @@ public class CalcController {
 
     protected void onSignButtonClick(String sign) {
         secondInFlag = true;
+        if ("sign".equals(actionSign.getText())) {
+            minusSign = false;
+        }
         actionSign.setText(sign);
     }
 
