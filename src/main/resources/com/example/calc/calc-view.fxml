@@ -16,7 +16,7 @@
           <Button layoutX="110.0" layoutY="47.0" minHeight="-Infinity" minWidth="-Infinity" onAction="#onBut_3" prefHeight="40.0" prefWidth="40.0" text="3" />
       </children>
    </HBox>
-    <HBox alignment="CENTER" layoutX="12.0" layoutY="193.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="26.0" prefWidth="122.0" spacing="1.0">
+    <HBox alignment="CENTER" layoutX="12.0" layoutY="186.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="122.0" spacing="1.0">
         <children>
             <Button minHeight="-Infinity" minWidth="-Infinity" onAction="#onBut_4" prefHeight="40.0" prefWidth="40.0" text="4" />
             <Button minHeight="-Infinity" minWidth="-Infinity" onAction="#onBut_5" prefHeight="40.0" prefWidth="40.0" text="5" />
@@ -32,11 +32,11 @@
     </HBox>
     <HBox alignment="CENTER" layoutX="12.0" layoutY="266.0" prefHeight="40.0" prefWidth="122.0" spacing="1.0">
         <children>
-            <Button layoutX="96.0" layoutY="47.0" minHeight="-Infinity" minWidth="-Infinity" onAction="#onBut_0" prefHeight="40.0" prefWidth="80.0" text="0" />
+            <Button layoutX="96.0" layoutY="47.0" minHeight="-Infinity" minWidth="-Infinity" onAction="#onBut_0" prefHeight="40.0" prefWidth="81.0" text="0" />
             <Button layoutX="102.0" layoutY="47.0" minHeight="-Infinity" minWidth="-Infinity" onAction="#onBut_comma" prefHeight="40.0" prefWidth="40.0" text="," />
         </children>
     </HBox>
-   <VBox alignment="CENTER" fillWidth="false" layoutX="134.0" layoutY="106.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="199.0" prefWidth="40.0">
+   <VBox alignment="CENTER" fillWidth="false" layoutX="135.0" layoutY="106.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="199.0" prefWidth="40.0">
       <children>
          <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#onPlus" prefHeight="40.0" prefWidth="40.0" text="+" />
          <Button layoutX="48.0" layoutY="97.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#onMinus" prefHeight="40.0" prefWidth="40.0" text="-" />
