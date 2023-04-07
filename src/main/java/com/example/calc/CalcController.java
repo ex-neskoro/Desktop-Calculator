@@ -7,72 +7,86 @@ import javafx.scene.text.Text;
 public class CalcController {
     @FXML
     public Text actionSign;
+    boolean minusSign = false;
+    boolean secondInFlag = false;
     @FXML
     private Text fNum;
     @FXML
     private Text sNum;
-
-    boolean minusSign = false;
-
     @FXML
     private TextField result;
-
     private StringBuilder firstBuffer = new StringBuilder();
     private StringBuilder secondBuffer = new StringBuilder();
-
-    boolean secondInFlag = false;
 
     @FXML
     protected void onBut_1() {
         onNumButtonClick("1");
     }
+
     @FXML
     protected void onBut_2() {
         onNumButtonClick("2");
     }
+
     @FXML
     protected void onBut_3() {
         onNumButtonClick("3");
     }
+
     @FXML
     protected void onBut_4() {
         onNumButtonClick("4");
     }
+
     @FXML
     protected void onBut_5() {
         onNumButtonClick("5");
     }
+
     @FXML
     protected void onBut_6() {
         onNumButtonClick("6");
     }
+
     @FXML
     protected void onBut_7() {
         onNumButtonClick("7");
     }
+
     @FXML
     protected void onBut_8() {
         onNumButtonClick("8");
     }
+
     @FXML
     protected void onBut_9() {
         onNumButtonClick("9");
     }
+
     @FXML
     protected void onBut_0() {
         onNumButtonClick("0");
     }
+
     @FXML
     protected void onBut_comma() {
-        onNumButtonClick(".");
+        if (!secondInFlag) {
+            if (firstBuffer.indexOf(".") < 0) {
+                onNumButtonClick(".");
+            }
+        } else {
+            if (secondBuffer.indexOf(".") < 0) {
+                onNumButtonClick(".");
+            }
+        }
     }
 
     protected void onNumButtonClick(String num) {
         appendNumToBuffer(num);
-        setTextBufferTextToCalc();
+        setBufferToCalcText();
     }
 
-    protected void setTextBufferTextToCalc() {
+    protected void setBufferToCalcText() {
         if (!secondInFlag) {
             fNum.setText(firstBuffer.toString());
         } else {
@@ -92,14 +106,17 @@ public class CalcController {
     protected void onPlus() {
         onSignButtonClick("+");
     }
+
     @FXML
     protected void onMinus() {
         onSignButtonClick("-");
     }
+
     @FXML
     protected void onMultiply() {
         onSignButtonClick("*");
     }
+
     @FXML
     protected void onDivide() {
         onSignButtonClick("/");
@@ -150,24 +167,24 @@ public class CalcController {
                 minusSign = false;
             }
         }
-        setTextBufferTextToCalc();
+        setBufferToCalcText();
     }
 
     @FXML
     protected void onEqualsSignClick() {
         double firstNum = Double.parseDouble(firstBuffer.toString());
         double secondNum = Double.parseDouble(secondBuffer.toString());
-        double resultNum = 0.0;
+        double result = 0.0;
 
         switch (actionSign.getText()) {
-            case "+" -> resultNum = firstNum + secondNum;
-            case "-" -> resultNum = firstNum - secondNum;
-            case "*" -> resultNum = firstNum * secondNum;
-            case "/" -> resultNum = firstNum / secondNum;
+            case "+" -> result = firstNum + secondNum;
+            case "-" -> result = firstNum - secondNum;
+            case "*" -> result = firstNum * secondNum;
+            case "/" -> result = firstNum / secondNum;
             default -> {
             }
         }
 
-        result.setText(String.valueOf(resultNum));
+        this.result.setText(String.valueOf(result));
     }
 }
